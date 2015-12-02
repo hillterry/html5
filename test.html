@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,follower-scalable=no" />
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <link href="css/animate.min.css?v=1.4" rel="stylesheet" />
+    <title>partner-mold</title>
+    <style>
+        body,ul {
+            margin: 0;
+            padding: 0;
+            overflow-x:hidden;
+        }
+        li{
+            list-style:none;
+        }
+        .partner-mold {
+            width: 640px;
+            height: 300px;
+            background: url(images/testgif.gif) no-repeat center;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .ita{
+            animation-iteration-count:3;
+            -webkit-animation-iteration-count:3;
+        }
+        .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+            .bg ul {
+                height: 100% !important;
+                width: 100% !important;
+                position: relative;
+            }
+
+                .bg ul li {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    display: list-item;
+                    height: 100% !important;
+                    width: 100% !important;
+                    text-indent: -9999px;
+                    overflow: hidden;
+                }
+
+        .test {
+            position: fixed;
+            top: 50%;
+            text-align: center;
+            z-index: 99;
+        }
+
+        .testtest{
+            position: fixed;
+            top: 50%;
+            text-align: center;
+            z-index: 99;
+        }
+
+
+        .position {
+            position: fixed;
+            top: 30%;
+            text-align: center;
+            z-index: 99;
+        }
+
+        .positiontest{
+            position: fixed;
+            top: 30%;
+            text-align: center;
+            z-index: 99;
+        }
+
+        .fontaone {
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+            animation-delay: 2s;
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            font-size:30px;
+        }
+
+        .fontaonedelay{
+            -webkit-animation-delay: 2.2s;
+            -moz-animation-delay: 2.2s;
+            animation-delay: 2.2s;
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            font-size:30px;
+        }
+        .test1{
+            text-align:left;
+        }
+
+        .test2 {
+            -webkit-animation-delay: 0.2s;
+            -moz-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+            margin-left: 100px;
+        }
+        .test3 {
+            -webkit-animation-delay: 0.5s;
+            -moz-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+
+        .thisis1 {
+            margin-left: 200px;
+            -webkit-animation-name: bounceInLeft;
+            animation-name: bounceInLeft;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .thisis2 {
+            -webkit-animation-delay: 0.2s;
+            -moz-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+            margin-left: 150px;
+            -webkit-animation-name: bounceInLeft;
+            animation-name: bounceInLeft;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .thisis3 {
+            text-align: right;
+            -webkit-animation-delay: 0.5s;
+            -moz-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+            -webkit-animation-name: bounceInLeft;
+            animation-name: bounceInLeft;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .thisistest{
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+            animation-delay: 2s;
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: chaos;
+            animation-name: chaos;
+        }
+
+        .thisistesttest{
+            -webkit-animation-delay: 2.2s;
+            -moz-animation-delay: 2.2s;
+            animation-delay: 2.2s;
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: chaos;
+            animation-name: chaos;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="font1">
+        <div class="test">
+            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+        </div>
+
+        <div class="testtest chaos2">
+            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+        </div>
+
+        <div class="testtest chaos3">
+            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+        </div>
+
+        <div class="testtest chaos4">
+            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+        </div>
+
+        <div class="testtest chaos5">
+            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+        </div>
+    </div>
+
+
+
+    <div id="font2" style="display:none;">
+        <div class="position">
+            <div><img src="images/testfont1.png" /></div>
+            <div><img src="images/testfont2.png" /></div>
+            <div><img src="images/testfont3.png" /></div>
+        </div>
+
+        <div class="positiontest">
+            <div><img src="images/testfont1.png" /></div>
+            <div><img src="images/testfont2.png" /></div>
+            <div><img src="images/testfont3.png" /></div>
+        </div>
+    </div>
+
+    <div class="bg">
+        <ul>
+            <li id="name1" class="testforscale" style="background: url(images/testbg.jpg) 50% 50% / cover no-repeat;
+                        -webkit-animation-duration: 5s;animation-duration: 5s;-webkit-animation-fill-mode: both;animation-fill-mode: both;">
+
+            </li>
+            <li id="name2" style="background: url(images/2.jpg) 50% 50% / cover no-repeat; display:none;-webkit-animation-duration: 4s;animation-duration: 4s;-webkit-animation-fill-mode: both;animation-fill-mode: both;">
+
+            </li>
+            <!--<li style="background: url(images/2.jpg) 50% 50% / cover no-repeat;"></li>
+        <li style="background: url(images/3.jpg) 50% 50% / cover no-repeat;"></li>-->
+        </ul>
+    </div>
+
+    <script>
+        $(function () {
+            setTimeout(function () {
+
+                $('#name2').css('display', 'list-item').addClass('testforscale1');
+
+                $('#font1').hide();
+                
+                $('.position > div').each(function (index) {
+                    $(this).addClass('thisis' +  (index+1))
+                })
+                $('.positiontest > div').each(function (index) {
+                    $(this).addClass('thisis' + (index + 1))
+                })
+
+                $('.position').addClass('thisistest');
+                $('.positiontest').addClass('thisistesttest');
+                
+                $('#font2').css('display', 'block');
+            }, 4000)
+
+          
+        })
+        
+    </script>
+
+</body>
+</html>

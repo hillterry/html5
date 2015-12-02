@@ -1,0 +1,25 @@
+body { font-size:20px; margin:0; padding:0; font-family: Microsoft YaHei;}
+ul{ list-style: none; margin: 0; padding: 0;}
+.t10{ font-size: 1rem;}
+.t12{ font-size:1.2rem;}
+.t16{ font-size:1.6rem;}
+.t20{font-size:20px;}
+.t25{font-size:25px;}
+.t30{font-size:30px;}
+.t35{font-size:35px;}
+.t35b{font-size:40px; font-weight: bold;}
+.t40{font-size:40px;}
+.fl{ float: left;}
+.fr{float: right;}
+.f-ml10{ margin-left:10px ;}
+.f-b{font-weight: bold;}
+
+input,textarea{ border: none; outline: none;}
+a{ text-decoration: none; color:#666}
+a:link{text-decoration:none ; color:#666 ;}
+a:visited {text-decoration:none ; color:#666 ;}
+a:hover {text-decoration:none ; color:#666 ;}
+a:active {text-decoration:none ; color:#666 ;}
+dl,dd,dt{ padding: 0; margin: 0;}
+h3{ padding: 0; margin: 0px;}
+*{-webkit-tap-highlight-color: transparent;}

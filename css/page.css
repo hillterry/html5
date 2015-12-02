@@ -1,0 +1,522 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #e7e0d3;
+}
+
+body{
+    width: 640px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    letter-spacing: 1px;
+    box-shadow: 0 0 160px 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-size: cover;
+}
+
+.page-container{
+    position: relative;
+    width: 640px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #e7e0d3;
+}
+
+.page {
+    border: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-position: top center;
+    background-size: cover;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    z-index: 0;
+    display: none;
+    -webkit-transform-origin: center center;
+    /*display: block;*/
+}
+
+
+.page.p-active {
+    z-index: 2;
+    display: block
+}
+
+.page.p-current {
+    z-index: 1;
+    display: block;
+    visibility: visible;
+}
+
+.page-content {
+    height: 100%;
+    overflow: hidden;
+    -webkit-box-flex: 100;
+}
+
+/* ==========================================================================
+   图片链接
+   ========================================================================== */
+.p-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    text-align: center
+}
+
+.page-link .p-link {
+    display: none;
+    text-align: center;
+}
+
+.page-link.p-current .p-link {
+    display: block;
+}
+
+.p-link .p-link-img {
+    text-decoration: none;
+    text-align: center;
+}
+
+.p-link .p-link-text{
+    background-color: #00aaff;
+    color: white;
+    display: inline-block;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 32px;
+    font-size: 26px;
+    padding: 0 40px;
+}
+
+.m-foregroundImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+
+
+/* ==========================================================================
+   纯文本
+   ========================================================================== */
+.p-text{
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+/* ==========================================================================
+   多图：图片飞入
+   ========================================================================== */
+.page-flying {
+
+}
+
+.page-flying .icon-left, .page-flying .icon-right {
+    -webkit-transition: all .6s;
+    -webkit-transition-delay: 2.2s;
+    opacity: 0
+}
+
+.page-flying.p-current .icon-left, .page-flying.p-current .icon-right {
+    opacity: 1
+}
+
+.flying-items {
+    width: 640px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box
+}
+
+.flying-items * {
+    overflow: hidden !important
+}
+
+.flying-items li {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none
+}
+
+.flying-items li:nth-child(1) {
+    display: block;
+    z-index: 3
+}
+
+.flying-items li:nth-child(2) {
+    display: block;
+    z-index: 2
+}
+
+.flying-items li:nth-child(3) {
+    display: block;
+    z-index: 1
+}
+
+.flying-items li img {
+    width: 580px;
+    border-radius: 2px;
+    box-shadow: 0 0 13px 0 #B8B8B8;
+    -webkit-transition: all 1s ease-out;
+    -webkit-transform: rotateZ(30deg) scale3d(3,3,3) translate3d(80%, 80%,0);
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    right: 0;
+    bottom: 30px;
+    margin-left: -290px
+}
+
+
+.flying-items.z-viewArea li:nth-child(1) img {
+    -webkit-transform: rotateZ(0deg) scale3d(1,1,1) translate3d(0%, 0, 0);
+    -webkit-transition-delay: 0.6s
+}
+
+.flying-items.z-viewArea li:nth-child(2) img {
+    -webkit-transform: rotateZ(1.6deg) scale3d(1,1,1) translate3d(0%, 0, 0);
+    -webkit-transition-delay: .3s
+}
+
+.flying-items.z-viewArea li:nth-child(3) img {
+    -webkit-transform: rotateZ(3.2deg) scale3d(1,1,1) translate3d(0%, 0, 0);
+    -webkit-transition-delay: 0s
+}
+
+.flying-items li .imgText {
+    font-size: 26px;
+    color: #fff;
+    padding: 12px 20px;
+    margin: 0px;
+    line-height: 32px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.6);
+    -webkit-transition: all 0.3s;
+    -webkit-transition-delay: 0.1s;
+    -webkit-transform: translate3d(0,100%,0);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    visibility: hidden;
+}
+
+.flying-items li:nth-child(1) .imgText {
+    z-index: 3;
+    visibility: visible
+}
+
+.flying-items li:nth-child(2) .imgText {
+    z-index: 2
+}
+
+.flying-items li:nth-child(3) .imgText {
+    z-index: 1
+}
+
+.flying-items li.p-current .imgText {
+    -webkit-transform: translate3d(0,0%,0)
+}
+
+.flying-items li.z-hideToLeft img {
+    -webkit-animation: cascadingTeletext_hideToLeft .3s linear
+}
+
+.flying-items li.z-hideToLeft .imgText, .flying-items li.z-hideToRight .imgText {
+    -webkit-transform: translate3d(0,100%,0)
+}
+
+@-webkit-keyframes cascadingTeletext_hideToLeft {
+    0% {
+        -webkit-transform: translate3d(0%,0,0)
+    }
+    100% {
+        -webkit-transform: translate3d(-100%,0,0);
+        opacity: 0
+    }
+}
+
+.flying-items li.z-hideToRight img {
+    -webkit-animation: cascadingTeletext_hideToRight .3s linear
+}
+
+@-webkit-keyframes cascadingTeletext_hideToRight {
+    0% {
+        -webkit-transform: translate3d(0%,0,0)
+    }
+    100% {
+        -webkit-transform: translate3d(100%,0,0);
+        opacity: 0
+    }
+}
+
+/* ==========================================================================
+   视频
+   ========================================================================== */
+
+.page-video {
+}
+
+.page-video .m-btnPlay {
+    -webkit-animation: bouncein 1s ease-out backwards;
+    display: none
+}
+
+.page-video.p-current .m-btnPlay {
+    display: block
+}
+
+.m-btnPlay {
+    display: block;
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -34px;
+    z-index: 1
+}
+
+.m-btnPlay i, .m-btnPlay div {
+    display: block;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.m-btnPlay i {
+    background: url(../images/play.png) 0 0px;
+    z-index: 1;
+}
+
+.m-btnPlay div {
+    background: rgba(255, 255, 255, .6);
+    z-index: 0;
+    -webkit-animation: video_btnPlay 1s linear infinite;
+    opacity: 0;
+}
+
+@-webkit-keyframes video_btnPlay {
+    0% {
+        -webkit-transform: scale3d(1,1,1);
+        opacity: .8
+    }
+    100% {
+        -webkit-transform: scale3d(2,2,2);
+        opacity: 0
+    }
+}
+
+.m-youkuVideo {
+    width: 100%;
+    height: 460px;
+    margin-top: 260px;
+    background-color: #000
+}
+
+.m-youkuVideo .videoBody {
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+    -webkit-transition: all .8s;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0
+}
+
+.m-youkuVideo .videoBody > * {
+    width: 640px !important;
+    height: 480px !important;
+    margin-top: 40%;
+    margin-bottom: 36%
+}
+
+.m-youkuVideo.z-showVideo .btnPlay {
+    display: none
+}
+
+.m-youkuVideo.z-showVideo .videoBody {
+    display: block
+}
+
+/* ==========================================================================
+   联系我们
+   ========================================================================== */
+.page-contact{
+
+}
+
+.p-contact{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    font-size: 32px;
+    background-color: white;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 40px 0;
+}
+
+.p-contact a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.p-contact .p-contact-label{
+    padding: 10px 10px 10px 30px;
+}
+
+/* ==========================================================================
+   自定义表单
+   ========================================================================== */
+.page-form{
+
+}
+
+.p-form{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 250px;
+    background-color: white;
+    width: 554px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 32px;
+}
+
+.p-form-title{
+    text-align: center;
+    margin-top: 40px;
+    color: #0a85ff;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.p-form-desc{
+    padding: 20px 40px 0;
+    font-size: 30px;
+    color: #888888;
+}
+
+.page-form ul{
+    list-style: none;
+}
+
+.page-form ul li{
+    line-height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+
+.page-form ul li:last-child{
+    border-bottom: 0px;
+}
+
+.p-form label{
+    margin-right: 20px;
+    margin-left: 25px;
+}
+
+.p-form input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+.p-form input[type="radio"] {
+    border: 1px solid #858585;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 9px;
+    border-radius: 50%;
+    background: transparent;
+    padding: 2px;
+    -webkit-transform: scale(1.5) translateY(1px);
+}
+
+.p-form input[type="checkbox"] {
+    border: 1px solid #858585;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 9px;
+    border-radius: 50%;
+    background: transparent;
+    padding: 2px;
+    -webkit-transform: scale(1.5) translateY(1px);
+}
+
+.p-form input[type="text"] {
+    width: 60%;
+    height: 50px;
+    border: 0px;
+    background: transparent;
+    margin-left: 15px;
+    line-height: 50px;
+}
+
+.p-form select{
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+.p-form-submit{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    background-color: #0a85ff;
+    width: 554px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 36px;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+
+.p-form-submit a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}

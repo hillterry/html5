@@ -1,0 +1,1156 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="gb2312" />
+    <meta name="author" content="Tencent-TGideas">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>腾讯新闻</title>
+    <script type="text/javascript">
+!function(){var a=navigator.userAgent;-1==a.indexOf("iPhone")&&-1==a.indexOf("iPad")&&-1==a.indexOf("iPod")&&-1==a.indexOf("Android")&&(self.location="http://wefire.qq.com/act/a20150826kris/pc/")}();
+ var browser={
+	versions:function(){
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return {
+			webKit: u.indexOf('AppleWebKit') > -1,
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+			weixin: u.indexOf('MicroMessenger') > -1,
+			txnews: u.indexOf('qqnews') > -1,
+			sinawb: u.indexOf('weibo') > -1,
+			mqq   : u.indexOf('QQ') > -1
+		};
+	}(),
+	language:(navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
+if (browser.versions.android||browser.versions.weixin||browser.versions.txnews||browser.versions.mqq){
+}else{
+	self.location="http://wefire.qq.com/act/a20150826kris/wb/index.htm?ADTAG=a20150826kris.tiaozhuan.wb";
+}
+    </script>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, button, input, select, textarea {
+            font: 12px/1.5 "黑体";
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%;
+        }
+
+        em {
+            font-style: normal;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+            max-width: 100%;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        body, html, .wrap {
+            height: 100%;
+        }
+
+        wrap {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .sp {
+            background-image: url(http://ossweb-img.qq.com/images/wefire/act/a20150826kris/sp.png);
+            background-size: 400px 400px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .page1 .tit {
+            font-size: 22px;
+            margin: 18px 0 10px 0;
+            line-height: 31px;
+            color: #28292d;
+        }
+
+        .page1 .news-info {
+            display: block;
+            font-size: 13px;
+            color: #aaa;
+            padding-bottom: 10px;
+        }
+
+        .page1 {
+            background-color: #f6f6f6;
+            color: #000;
+            padding-bottom: 20px;
+        }
+
+            .page1 .content {
+                padding: 0 16px;
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+        .borderLogo {
+            height: 36px;
+            border-bottom: 1px #c5c5c5 solid;
+            margin: 0 16px;
+            padding-top: 14px;
+        }
+
+        .logoImg {
+            display: block;
+            width: 136px;
+            height: 20px;
+            background-position: 0 0;
+        }
+
+        .page1 .content .img-box {
+            padding: 10px 0;
+        }
+
+        .page1 .ti {
+            text-indent: 1.5em;
+            font-size: 18px;
+            color: #47494c;
+            line-height: 28px;
+        }
+
+        .page .d-btn {
+            display: block;
+            margin: 20px 0 0px 0;
+            height: 42px;
+            line-height: 42px;
+            color: #649af9;
+            font-size: 16px;
+            border: 1px solid #649af9;
+            border-radius: 3px;
+            position: relative;
+            text-align: center;
+        }
+
+            .page .d-btn .icon {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 7px;
+                background-position: 0px -50px;
+            }
+
+        .rel_news h3 {
+            margin-bottom: 10px;
+            font-size: 19px;
+            line-height: 19px;
+            border-left: 4px solid #2B61C0;
+            border-left-color: #2B61C0;
+            padding-left: 11px;
+        }
+
+        .itemlist {
+            padding: 0 16px;
+        }
+
+        .thumb {
+            width: 75px;
+            height: 60px;
+            float: left;
+            margin-top: 10px;
+        }
+
+        .rel_news .item1 .thumb {
+            background-position: 0px -100px;
+        }
+
+        .rel_news .item2 .thumb {
+            background-position: -100px -100px;
+        }
+
+        .rel_news .item {
+            border-bottom: 1px solid #e3e5e7;
+            padding-bottom: 10px;
+        }
+
+        .rel_news .txt {
+            overflow: hidden;
+            padding-left: 8px;
+        }
+
+
+        .rel_news h2 {
+            font-size: 16px;
+            color: #47494c;
+            line-height: 24px;
+            padding-top: 8px;
+        }
+
+        .r-news-info {
+            font-size: 13px;
+            color: #8d8d8d;
+        }
+
+        .page {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .page1 {
+            z-index: 9;
+        }
+
+        .page2 {
+            z-index: 8;
+        }
+
+        .page3 {
+            z-index: 7;
+        }
+
+        .page4 {
+            z-index: 6;
+        }
+
+        .page5 {
+            z-index: 5;
+        }
+
+
+        .page3 {
+            color: #fff;
+            background: url(http://ossweb-img.qq.com/images/wefire/act/a20150826kris/bg_vcall.jpg) no-repeat 0px 0px;
+            background-size: cover;
+            position: relative;
+        }
+
+        .page3-content, .page5-con {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 8;
+            width: 320px;
+            height: 504px;
+            margin: -252px 0 0 -160px;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+            overflow: hidden;
+        }
+
+
+        .page3 .hd {
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        .page3 .nickname {
+            font-size: 27px;
+            display: block;
+        }
+
+        .page3 .hd .txt {
+            overflow: hidden;
+            padding-left: 15px;
+        }
+
+        .avatar {
+            display: block;
+            float: left;
+            width: 66px;
+            height: 66px;
+            background-position: 0px -200px;
+        }
+
+        .remind, .msg {
+            width: 45%;
+        }
+
+        .answer {
+            width: 72px;
+            margin: 0px auto;
+            clear: both;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+
+            .answer .icon {
+                display: block;
+                width: 75px;
+                height: 72px;
+                background-position: -100px -250px;
+                padding-bottom: 10px;
+                -webkit-tap-highlight-color: rgba(255,255,255,0);
+            }
+
+        .page3 .fd {
+            text-align: center;
+            font-size: 14px;
+            height: 180px;
+            width: 100%;
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+        }
+
+        .fd .column {
+            width: 90px;
+            margin: 0px auto;
+        }
+
+        .column .icon {
+            display: block;
+            width: 21px;
+            height: 21px;
+            margin: 0px auto;
+            padding-bottom: 8px;
+        }
+
+        .remind .icon {
+            background-position: -100px -200px;
+        }
+
+        .msg .icon {
+            background-position: -150px -200px;
+        }
+
+        video {
+            font-size: 100%;
+            line-height: 0;
+            vertical-align: baseline;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: none;
+        }
+
+
+
+        .page4 {
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .videobox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 8;
+            width: 320px;
+            height: 504px;
+            margin: -252px 0 0 -160px;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+            overflow: hidden;
+        }
+
+        .page5 {
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .video-box {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+
+        .ring-bg {
+            height: 0;
+            display: none;
+        }
+
+        .page1 {
+            height: auto;
+        }
+
+        .pick_comments, .rel_news {
+            padding-top: 40px;
+        }
+
+            .pick_comments h1 {
+                margin-bottom: 10px;
+                font-size: 19px;
+                color: #28292d;
+                line-height: 19px;
+                border-left: 4px solid #2B61C0;
+                padding-left: 11px;
+                border-left-color: #ff9c00;
+            }
+
+            .pick_comments .item {
+                position: relative;
+                color: #47494c;
+                border-bottom: 1px solid #e0e0e0;
+                vertical-align: top;
+            }
+
+            .pick_comments .avatar {
+                position: absolute;
+                top: 15px;
+            }
+
+                .pick_comments .avatar img {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                }
+
+            .pick_comments .nameBar {
+                padding-top: 14px;
+                margin-left: 40px;
+                font-size: 14px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 700;
+            }
+
+                .pick_comments .nameBar span {
+                    float: right;
+                    font-size: 13px;
+                    color: #8d8d8d;
+                }
+
+            .pick_comments .contentBox {
+                padding-left: 40px;
+                overflow: hidden;
+            }
+
+            .pick_comments p {
+                font-size: 14px;
+                line-height: 24px;
+                margin: 7px 0 10px;
+                white-space: normal;
+                word-break: break-all;
+            }
+
+        .btn-off {
+            display: block;
+            width: 74px;
+            text-align: center;
+            font-size: 15px;
+            color: #fff;
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            margin-left: -37px;
+            z-index: 9;
+            opacity: 1;
+        }
+
+            .btn-off .icon {
+                display: block;
+                width: 75px;
+                height: 72px;
+                background-position: 0px -300px;
+                padding-bottom: 10px;
+            }
+
+        .btn-off-hide {
+            opacity: 0;
+        }
+
+        .btn-off, .show-end {
+            transition: all 0.3s ease-out 0s;
+            -webkit-transition: all 0.3s ease-out 0s;
+            -moz-transition: all 0.3s ease-out 0s;
+            -o-transition: all 0.3s ease-out 0s;
+            -ms-transition: all 0.3s ease-out 0s;
+        }
+
+        .show-end {
+            transition: all 1s ease-out 0s;
+            -webkit-transition: all 1s ease-out 0s;
+            -moz-transition: all 1s ease-out 0s;
+            -o-transition: all 1s ease-out 0s;
+            -ms-transition: all 1s ease-out 0s;
+        }
+
+        .page5 {
+            opacity: 0;
+        }
+        /* filter: alpha(opacity=0);*/
+        /* -webkit-transform: translate3d(0, -100%, 0);*/
+        /* -ms-transform: translate3d(0, -100%, 0);*/
+        /* transform: translate3d(0, -100%, 0);}*/
+        .show-end {
+            opacity: 1;
+        }
+        /* filter: alpha(opacity=100);*/
+        /* -webkit-transform: none;*/
+        /* -ms-transform: none;*/
+        /* transform: none;}*/
+
+
+        .spe {
+            background-size: 320px 462px;
+            background-repeat: no-repeat;
+        }
+
+        .page5-con {
+            width: 320px;
+            height: 504px;
+        }
+
+            .page5-con .icon {
+                display: block;
+                width: 126px;
+                height: 30px;
+                background-position: -8px 0px;
+                margin: 10px;
+            }
+
+            .page5-con .slogan {
+                height: 265px;
+                background-position: 50% -55px;
+                width: 100%;
+                position: absolute;
+                top: 13%;
+                left: 0;
+            }
+
+            .page5-con .btn-box a {
+                display: block;
+                margin: 0px auto;
+                width: 210px;
+            }
+
+            .page5-con .btn-box {
+                position: absolute;
+                width: 100%;
+                top: 71%;
+                left: 0;
+            }
+
+        .btn-play {
+            height: 60px;
+            background-position: -55px -350px;
+            text-indent: -800em;
+        }
+
+        .btn-share {
+            height: 45px;
+            background-position: -55px -408px;
+            padding-top: 10px;
+            color: #242424;
+            font-size: 18px;
+            line-height: 43px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0px 1px 0px #8e8e8e;
+        }
+
+
+        .page5-con .slogan, .page5-con .btn-box, .page5-con .btn-share, .page5-con .icon {
+            opacity: 0;
+        }
+
+        .show-end .slogan, .show-end .btn-box, .show-end .btn-share, .show-end .icon {
+            -webkit-animation: anim-badge .3s .7s ease both;
+        }
+
+        .show-end .slogan {
+            -webkit-animation-delay: 0.2s;
+        }
+
+        .show-end .btn-box {
+            -webkit-animation-delay: 0.5s;
+        }
+
+        .show-end .btn-share {
+            -webkit-animation-delay: 0.5s;
+        }
+
+        .show-end .icon {
+            -webkit-animation-delay: 0.7s;
+        }
+
+        @-webkit-keyframes anim-badge {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(2.5);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+            }
+        }
+
+        /* share-lay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.8);
+            opacity: 0;
+            -webkit-transition: all 2s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            z-index: 0;
+        }
+
+        .overlay-show {
+            opacity: 1;
+            z-index: 100;
+        }
+
+        .overlay .arrow {
+            position: absolute;
+            width: 166px;
+            height: 236px;
+            right: 0px;
+            top: 10px;
+            background-repeat: no-repeat;
+            background-size: 166px 236px;
+        }
+
+
+
+
+        .invite-load span {
+            display: inline-block;
+            width: 2px;
+            height: 2px;
+            border-radius: 100%;
+            background-color: #fff;
+            -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+            animation: bouncedelay 1.4s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            margin: 0 3px;
+        }
+
+        .invite-load .load_one {
+            -webkit-animation-delay: -0.32s;
+        }
+
+        .invite-load .load_two {
+            -webkit-animation-delay: -0.16s;
+        }
+
+        .invite-load .load_three {
+            -webkit-animation-delay: 0s;
+        }
+
+        @-webkit-keyframes bouncedelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(1.0);
+                opacity: 0;
+            }
+
+            40% {
+                -webkit-transform: scale(1.0);
+                opacity: 1;
+            }
+        }
+
+
+
+        /*安卓*/
+        #v1Box {
+            position: relative;
+        }
+
+        .poster {
+            display: none;
+        }
+
+        .poster-show {
+            display: block;
+            width: 100%;
+            padding-top: 66.55%;
+            z-index: 99;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            background: url(http://ossweb-img.qq.com/images/wefire/act/a20150826kris/bg_poster.jpg) no-repeat 50% 50%;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="wrap">
+        <div class="page page1">
+            <div class="borderLogo">
+                <span class="logoImg sp"></span>
+            </div>
+            <div class="content">
+                <h1 class="tit">粉丝哭倒？吴亦凡圆寸疑为入伍做准备</h1>
+                <span class="news-info">2015-08-28.   腾讯娱乐</span>
+                <p class="ti">近日，当红影视歌三栖明星吴亦凡的圆寸终于被媒体捕捉到了。让粉丝惊呼，圆寸果然是检验帅哥的首要标准。不过，更让粉丝惊讶的是圆寸比想象中还要短，这是为新片做造型？还是像传闻爆料一样为当兵做准备？</p>
+                <div class="img-box" id="v1Box">
+                    <!-- <img src="images/wyf-img.jpg" /> -->
+                    <div class="poster"></div>
+
+                    <!-- <video class="video-box" data-index="1" id="videoIndex1"  x-webkit-airplay="true" webkit-playsinline="true" preload="auto"  src="./v1.mp4"></video> -->
+                    <video class="video-box" data-index="1" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="http://ossweb-img.qq.com/images/wefire/act/a20150826kris/v1.mp4" poster="http://ossweb-img.qq.com/images/wefire/act/a20150826kris/bg_poster.jpg"></video>
+                </div>
+                <p class="ti">其实，吴亦凡要入伍传闻并非空穴来风。早前，吴亦凡曾表示过对一身戎装强烈渴望；其本人更认为，男人没当过兵，是一种遗憾。难道男神剃头真准备应招入伍了？一石激起千层浪，一个传闻惹哭一众粉丝……</p>
+            </div>
+
+            <div class="commentBox">
+                <div class="pick_comments">
+                    <h1>精选评论</h1>
+                    <div class="itemlist">
+                        <div class="item">
+                            <div class="avatar"><img src="http://ossweb-img.qq.com/images/wefire/act/a20150826kris/avatar_comt.png"></div>
+                            <div class="nameBar">
+                                光速小子<i></i>
+                                <span> 9小时前</span>
+                            </div>
+                            <div class="contentBox">
+                                <p>
+                                    不可能吧，亦凡不管怎么样我都会一直支持他的！
+                                </p>
+                            </div>
+
+                        </div>
+                        <a href="javascript:;" class="d-btn"><i class="sp icon"></i><span>下载腾讯新闻看评论（226）</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rel_news">
+                <h3>相关新闻</h3>
+                <div class="itemlist">
+                    <div class="item item1 clearfix">
+                        <div class="thumb sp"></div>
+                        <div class="txt">
+                            <h2>吴亦凡青春系写真曝光 鬼马表情超吸睛</h2>
+                            <p class="r-news-info">2015-08-21 腾讯娱乐</p>
+                        </div>
+                    </div>
+                    <div class="item item2 clearfix">
+                        <div class="thumb sp"></div>
+                        <div class="txt">
+                            <h2>刘亦菲化身国民初恋 吴亦凡秀俊俏侧颜</h2>
+                            <p class="r-news-info">2015-08-22 腾讯娱乐</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page page2">
+            <div class="videobox">
+                <video class="video-box" data-index="2" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="http://ossweb-img.qq.com/images/wefire/act/a20150826kris/v2.mp4"></video>
+            </div>
+        </div>
+        <div class="page page3">
+            <div class="page3-content">
+                <div class="hd">
+                    <span class="avatar sp"></span>
+                    <div class="txt">
+                        <span class="nickname">吴亦凡</span>
+                        <span class="invite-load">邀请你视频聊天<span class="load_one"></span><span class="load_two"></span><span class="load_three"></span></span>
+                    </div>
+                </div>
+                <div class="fd">
+                    <div class="remind fl">
+                        <div class="column">
+                            <span class="icon sp"></span>
+                            提醒我
+                        </div>
+                    </div>
+                    <div class="msg fr">
+                        <div class="column">
+                            <span class="icon sp"></span>
+                            信息
+                        </div>
+                    </div>
+                    <div class="answer answer-load">
+                        <a href="javascript:;" class="icon sp btn-answer"></a>
+                        接听
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page page4">
+            <div class="videobox">
+                <video class="video-box" data-index="3" id="videoIndex3" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="http://ossweb-img.qq.com/images/wefire/act/a20150826kris/v3.mp4"></video>
+            </div>
+            <a href="javascript:;" class="btn-off"><span class="icon sp"></span>拒绝</a>
+        </div>
+        <div class="page page5">
+            <div class="page5-con">
+                <span class="icon spe"></span>
+                <div class="slogan spe">
+
+                </div>
+                <div class="btn-box">
+                    <a href="http://wefire.qq.com/d/start.html?channel=3&ADTAG=a20150826kris.btn.join" class="btn-play spe">加入亦起战</a>
+                    <div class="share-txt">
+                        <a href="javascript:sharePop.show();" class="btn-share spe">告诉每个你</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="shareOverlay" ontouchstart="sharePop.hide()">
+        <div class="arrow"></div>
+    </div>
+    <audio src="http://ossweb-img.qq.com/images/wefire/act/a20150826kris/ring.mp3" class="ring-bg" loop="loop"></audio>
+
+    <script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+    <script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+    <script>
+
+
+
+var query = function(selector){
+	return document.querySelector(selector);
+};
+
+
+
+
+
+
+if (browser.versions.ios){
+var v1 = query('#videoIndex1');
+v1.play();
+//v1.addEventListener("playing", function (){
+//	$("#videoIndex1")[0].webkitExitFullScreen();
+//	alert(2);
+//}, false);
+}
+
+
+
+if (browser.versions.android||browser.versions.txnews){
+	var _h = $("#v1Box").width()*0.6655;
+	$("#v1Box").css('height',_h);
+	$(".poster").addClass("poster-show");
+	$("#videoIndex3").attr("controls",true);
+
+	var initV1 = function (){
+		if (v1.currentTime>0){
+			$(".poster").hide();
+			//v2.removeEventListener("timeupdate", initV2, false);
+		}
+	}
+	var v1 = query('#videoIndex1');
+	v1.addEventListener("timeupdate", initV1, false);
+
+	var initV2 = function (){
+		if (v2.currentTime>0){
+			v2.pause();
+			v2.removeEventListener("timeupdate", initV2, false);
+		}
+	}
+	var v2 = query('#videoIndex2');
+	v2.addEventListener("timeupdate", initV2, false);
+
+	 $(document).one('touchstart', function (e) {
+		var v2 = query('#videoIndex2');
+		v2.play();
+	 });
+
+
+	var isPlay = false;
+
+	$(document).on("touchmove",function(){
+		if (isPlay) return;
+		var t = query('#v1Box').getBoundingClientRect().bottom;
+		if (t < 530 && !isPlay) {
+			query("#videoIndex1").play();
+			pgvSendClick({hottag:'a20150826kris.v1.play'});
+			isPlay = true;
+		}
+	});
+
+}
+
+var a = document.documentElement.clientHeight, s = document.documentElement.clientWidth;
+
+function e(e, n) {
+    var t, i = s / a, r = 320 / 504;
+    t = i > r ? a / 504 :s / 320, $(e).css({
+        "-webkit-transform-origin":n,
+        "transform-origin":n,
+        "-webkit-transform":"scale(" + t + ");",
+        transform:"scale(" + t + ");"
+    });
+}
+
+function d(e, n) {
+    var t, i = s / a, r = 320 / 504;
+    t = i < r ? a / 504 :s / 320, $(e).css({
+        "-webkit-transform-origin":n,
+        "transform-origin":n,
+        "-webkit-transform":"scale(" + t + ");",
+        transform:"scale(" + t + ");"
+    });
+}
+
+e(".page3-content",'center center');
+e(".page5-con",'center center');
+d(".videobox",'center center');
+
+$('.btn-answer').click(function(){
+	 document.title="吴亦凡邀你亦起战";
+	query(".ring-bg").pause();
+	$(".page3").hide();
+	query("#videoIndex3").play();
+	pgvSendClick({hottag:'a20150826kris.v3.play'});
+	setTimeout(function (){
+	  $(".btn-off").addClass("btn-off-hide")
+	},3000)
+});
+
+
+
+$(".page4").tap(function (){
+	$(".btn-off").removeClass("btn-off-hide");
+	setTimeout(function (){
+	  $(".btn-off").addClass("btn-off-hide")
+	},2000)
+
+})
+
+
+
+ $(".video-box").each(function(){
+	$(this)[0].addEventListener("play",function(evt) {
+		videoUtil.onPlay();
+	});
+
+	$(this)[0].addEventListener("ended",function(evt) {
+		var evtTarget = evt.target || evt.srcElement;
+		videoUtil.onEnd(evtTarget.getAttribute('data-index'))
+	});
+
+});
+
+
+var videoUtil = {
+    onPlay:function() {},
+    onEnd:function(a) {
+        //this.currentTime = 0;
+        switch (a) {
+          case "1":
+
+	//$("#v1Box").remove();
+            query("#videoIndex2").play();
+			pgvSendClick({hottag:'a20150826kris.v2.play'});
+            setTimeout(function() {
+                $(".page1").hide();
+            }, 350);
+            break;
+
+          case "2":
+            document.title="吴亦凡邀你亦起战";
+			$(".page2").hide();
+            query(".ring-bg").play();
+			pgvSendClick({hottag:'a20150826kris.ring.play'});
+            break;
+
+          case "3":
+			//query(".end-bgm").play();
+			pgvSendClick({hottag:'a20150826kris.end.page'});
+			$(".page4").hide();
+            $(".page5").addClass("show-end");
+        }
+    },
+    onError:function() {}
+};
+
+
+
+
+
+var sharePop = function() {
+    var o = query("#shareOverlay");
+    var cls = o.className;
+    var show = function() {
+        o.style.zIndex = 80;
+        o.className = "overlay overlay-show";
+		pgvSendClick({hottag:'a20150826kris.sharepop.show'});
+    };
+    var hide = function() {
+        o.className = cls.replace(/overlay-show/, "");
+        setTimeout(function() {
+            o.style.zIndex = 1;
+        }, 300);
+    };
+    return {
+        show:show,
+        hide:hide
+    };
+}();
+
+
+
+
+// imgLazyload
+var loadImage = function(path, callback) {
+    var img = new Image();
+    img.src = path;
+    img.onload = function() {
+        img.onload = null;
+        callback(path);
+    };
+};
+$(function(){
+	var _url = "http://ossweb-img.qq.com/images/wefire/act/a20150826kris/";
+	loadImage(_url+"sp_end.png", function(path){
+		$(".spe").css("background-image","url("+path+")");
+	});
+	loadImage(_url+"bg_end.jpg", function(path){
+		$(".page5").css("background-image","url("+path+")");
+	});
+	if (browser.versions.weixin){
+		query(".btn-share").innerHTML='重看一遍';
+		query(".btn-share").setAttribute('href','http://wefire.qq.com/act/a20150826kris/m/index.htm?ADTAG=a20150826kris.btn.again');
+	}else{
+		loadImage(_url+"bg_share.png", function(path){
+			$(".overlay .arrow").css("background-image","url("+path+")");
+		});
+	}
+
+
+	if(typeof(pgvMain) == 'function') pgvMain();
+});
+
+
+function loadScript(url, callback) {
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+    if (script.readyState) {
+        script.onreadystatechange = function() {
+            if (script.readyState == "loaded" || script.readyState == "complete") {
+                script.onreadystatechange = null;
+                if (callback) {
+                    callback()
+                }
+            }
+        }
+    } else {
+        script.onload = function() {
+            if (callback) {
+                callback()
+            }
+        }
+    }
+    script.src = url;
+    document.body.appendChild(script)
+};
+
+loadScript("http://ossweb-img.qq.com/images/js/WXJssdk.js",unitWXShare,"");
+loadScript("http://pub.idqqimg.com/qqmobile/qqapi.js?_bid=152",unitSQShare,"");
+
+//分享信息自定义
+window.shareData = {
+  "imgUrl":"http://ossweb-img.qq.com/images/wefire/act/a20150826kris/120x120.jpg",
+  "timeLineLink":window.location.href,
+  "tTitle": "吴亦凡即将入伍？！",
+  "tContent": "吴亦凡变身硬汉风格，正式入伍突击战队！",
+  "actName":"a20150826kris"
+};
+//微信分享初始化
+function unitWXShare(){
+	WXJssdk.init(function(wx){
+		//分享到朋友
+		wx.onMenuShareAppMessage({
+			title:shareData.tTitle,
+			desc:shareData.tContent,
+			link:shareData.timeLineLink,
+			imgUrl:shareData.imgUrl,
+			success:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.friend_success'});},
+			cancel:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.friend_cancel'});}
+		});
+		//分享到朋友圈
+		wx.onMenuShareTimeline({
+			title:shareData.tTitle,
+			link:shareData.timeLineLink,
+			imgUrl:shareData.imgUrl,
+			success:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.timeline_success'});},
+			cancel:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.timeline_cancel'});}
+		});
+		//分享到SQ
+		wx.onMenuShareQQ({
+			title:shareData.tTitle,
+			desc:shareData.tContent,
+			link:shareData.timeLineLink,
+			imgUrl:shareData.imgUrl,
+			success:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.qq_success'});},
+			cancel:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.qq_cancel'});}
+		});
+		//分享到微博
+		wx.onMenuShareWeibo({
+			title:shareData.tTitle,
+			desc:shareData.tContent,
+			link:shareData.timeLineLink,
+			imgUrl:shareData.imgUrl,
+			success:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.wb_success'});},
+			cancel:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.wb_cancel'});}
+		});
+		//分享到QZone
+		wx.onMenuShareQZone({
+			title:shareData.tTitle,
+			desc:shareData.tContent,
+			link:shareData.timeLineLink,
+			imgUrl:shareData.imgUrl,
+			success:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.qz_success'});},
+			cancel:function(){pgvSendClick({hottag:'ACT.'+shareData.actName+'.relay.qz_cancel'});}
+		});
+	});
+
+}
+//手Q分享初始化
+function unitSQShare(){
+	mqq.data.setShareInfo({
+		share_url: shareData.timeLineLink,
+		title: shareData.tTitle,
+		desc: shareData.tContent,
+		image_url:shareData.imgUrl
+		},
+		function(){pgvSendClick({hottag:'act.'+shareData.actName+'.qq.py'});}
+	);
+}
+
+
+    </script>
+</body>
+</html>
+<!--[if !IE]>|xGv00|db3d19609655615d9f40ac0ddd860eca<![endif]-->

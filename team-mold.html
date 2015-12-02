@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, user-scalable=0, target-densitydpi=device-dpi, minimal-ui">
+    <meta id="metaDescription" name="description" content="">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/page.animations.css">
+    <link rel="stylesheet" type="text/css" href="./css/page.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/play.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <title></title>
+</head>
+
+<body>
+
+    <div class="page-container" style="">
+
+        <div id="page_0" class="page p-current  page-flying" style="-webkit-transition: -webkit-transform 0.4s ease-out; transition: -webkit-transform 0.4s ease-out; -webkit-transform-origin: 50% 0%; -webkit-transform: translate3d(0px, 0px, 0px); background-image: url(./images/guide_bj.jpg); background-position: 50% 100%;">
+            <div class="page-content">
+
+                <ul class="flying-items z-viewArea" style="height: 354px;">
+                    <li class="">
+                        <img src="./images/office/1.jpg">
+                        <div class="image-text">这里写文字会怎么样</div>
+                    </li>
+                    <li class="">
+                        <img src="./images/office/2.jpg">
+                        <div class="image-text">这里写文字会怎么样</div>
+                    </li>
+                    <li class="">
+                        <img src="./images/office/3.jpg">
+                        <div class="image-text">这里写文字会怎么样</div>
+                    </li>
+                    <li class="">
+                        <img src="./images/office/4.jpg">
+                        <div class="image-text">这里写文字会怎么样</div>
+                    </li>
+                    <li class="">
+                        <img src="./images/office/5.jpg">
+                        <div class="image-text">这里写文字会怎么样</div>
+                    </li>
+                    <li class="">
+                        <img src="./images/office/6.jpg">
+                        <div class="image-text">这里写文字会怎么样</div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="./js/zepto.min.js"></script>
+    <script type="text/javascript" src="./js/sea.js"></script>
+
+    <script type="text/javascript">
+        var gVar = {
+            appId: 140,
+            appName: 'haituncun',
+            appPageSwitchIndex: 100,
+            luncherIsOpen: 0,
+            luncherImage: '',
+            luncherShowType: 102,
+            bkMusicIsOpen: 0,
+            shareDesc: '',
+            shareTitle: '',
+            shareImage: ""
+        };
+        var gVersion = 0.97;
+        seajs.config({
+            base: "./js/",
+            alias: {
+                'main': 'main.js?' + gVersion,
+                'pagetransitions': 'pagetransitions.js?' + gVersion,
+                'clip': 'clip.js?' + gVersion
+            }
+        });
+        seajs.use('main');
+
+
+    </script>
+
+
+
+</body>
+
+</html>

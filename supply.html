@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,supplyer-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/animation.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<title>supply</title>
+		<script type="text/javascript">
+			$(function() {
+				$(".supply").css("min-height", $(window).height());
+				$(window).resize(function() {
+					$("supply").css("min-height", $(window).height());
+				});
+				var obj1 = [
+                {
+                    ClassName: ".supply-content li:nth-child(1)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(2)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(3)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(4)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(5)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(6)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(7)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(8)",
+                    AddClass: "move",
+                    timer: 350
+                },
+                {
+                    ClassName: ".supply-content li:nth-child(9)",
+                    AddClass: "move",
+                    timer: 350
+                }
+
+            ]
+            $(".supply-content li")
+            delytime(obj1)
+        })
+        function delytime(obj) {
+            var i = 0;
+            var addanit = function () {
+                var objlist = obj;
+                if (i >= objlist.length) {
+                    clearTimeout(setTO);
+                    return;
+                }
+                var that = objlist[i];
+                var $obj = $(that.ClassName);
+                i++;
+                var setTO = setTimeout(function () {
+                    $obj.addClass(that.AddClass);
+                    addanit(objlist, that.timer)
+                }, that.timer)
+            }
+            addanit();
+        }
+		</script>
+	</head>
+
+	<body>
+		<div class="supply">
+			<div class="supply-top">
+				<div class="supply-1 fl " >
+					<img src="images/supply-1.png" />
+				</div>
+				<div class="supply-2 fr " >
+					<img src="images/supply-2.png" />
+				</div>
+			</div>
+			<div class="supply-content fontarial">
+				<ul>
+					<li>
+						<a href="supply-mold.html?type=1">
+							<img src="images/s-1.png" />
+							<p>BRITAIN</p>
+						</a>
+					</li>
+					<li>
+						<a  href="supply-mold.html?type=2">
+							<img src="images/s-2.png" />
+							<p>GERMANY</p>
+						</a>
+					</li>
+					<li>
+						<a  href="supply-mold.html?type=3">
+							<img src="images/s-3.png" />
+							<p>AUSTRALIA</p>
+						</a>
+					</li>
+					<li>
+						<a href="supply-mold.html?type=4">
+							<img src="images/s-4.png" />
+							<p>HOLLAND</p>
+						</a>
+					</li>
+					<li>
+						<a  href="supply-mold.html?type=5">
+							<img src="images/s-5.png" />
+							<p>USA</p>
+						</a>
+					</li>
+					<li>
+						<a  href="supply-mold.html?type=6">
+							<img src="images/s-6.png" />
+							<p>FRANCE</p>
+						</a>
+					</li>
+					<li>
+						<a  href="supply-mold.html?type=7">
+							<img src="images/s-7.png" />
+							<p>BELGIUM</p>
+						</a>
+					</li>
+					<li>
+						<a  href="supply-mold.html?type=8">
+							<img src="images/s-8.png" />
+							<p>Korea</p>
+						</a>
+					</li>
+                    <li>
+                        <a href="supply-mold.html?type=8">
+                            <img src="images/s-9.png" />
+                            <p>HONG KONG</p>
+                        </a>
+                    </li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+
+</html>

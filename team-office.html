@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/animation.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<title>team-office</title>
+		<script type="text/javascript">
+			$(function() {
+					$(".team-office").css("min-height", $(window).height());
+				$(window).resize(function() {
+					$("team-office").css("min-height", $(window).height());
+				});
+				var obj1 = [{
+					ClassName: ".team-office-1",
+					AddClass: "a-bounceinT",
+					timer: 0
+				}, {
+					ClassName: ".team-office-2",
+					AddClass: "a-bounceinR",
+					timer: 300
+				}, ]
+				delytime(obj1)
+			})
+
+			function delytime(obj) {
+				var i = 0;
+				var addanit = function() {
+					var objlist = obj;
+					if (i >= objlist.length) {
+						clearTimeout(setTO);
+						return;
+					}
+					var that = objlist[i];
+					var $obj = $(that.ClassName);
+					i++;
+					var setTO = setTimeout(function() {
+						$obj.addClass(that.AddClass);
+						addanit(objlist, that.timer)
+					}, that.timer)
+				}
+				addanit();
+			}
+		</script>
+	</head>
+	<body>
+		<div class="team-office">
+		<div class="team-office-top">
+			<div class="team-office-1 fl " >
+				<img src="images/team-office-1.png"/>
+			</div>
+			<div class="team-office-2 fr " >
+				<img src="images/team-office-2.png"/>
+			</div>
+		</div>	
+		<div class="team-office-content">
+			<div class="office fl">
+				<a href="office-mold.html">
+					<img class="office-pic" src="images/office.png"/>
+					<img class="office-text" src="images/office-text.png"/>
+					<button>环境</button>
+				</a>
+			</div>	
+			<div class="team fr">
+				<a href="team-mold.html">
+				<img class="team-pic" src="images/team.png"/>
+				<img class="team-text" src="images/team-text.png"/>
+				<button>团队</button>
+			</a>
+			</div>
+		</div>
+		</div>
+		
+	</body>
+</html>

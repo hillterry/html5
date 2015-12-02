@@ -1,0 +1,92 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/animation.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<title>join</title>
+		<script type="text/javascript">
+			$(function() {
+					$(".join").css("min-height", $(window).height());
+				$(window).resize(function() {
+					$("join").css("min-height", $(window).height());
+				});
+				var obj1 = [
+					{
+						ClassName: ".join-content li:nth-child(1)",
+						AddClass: "move",
+						timer: 750
+					},
+					{
+						ClassName: ".join-content li:nth-child(2)",
+						AddClass: "move",
+						timer: 350
+					},
+					{
+						ClassName: ".join-content li:nth-child(3)",
+						AddClass: "move",
+						timer: 350
+					},
+					{
+						ClassName: ".join-content li:nth-child(4)",
+						AddClass: "move",
+						timer: 350
+					},
+					{
+						ClassName: ".join-content li:nth-child(5)",
+						AddClass: "move",
+						timer: 350
+					}
+
+				]
+				$(".partner-content li")
+				delytime(obj1)
+			})
+			function delytime(obj) {
+				var i = 0;
+				var addanit = function () {
+					var objlist = obj;
+					if (i >= objlist.length) {
+						clearTimeout(setTO);
+						return;
+					}
+					var that = objlist[i];
+					var $obj = $(that.ClassName);
+					i++;
+					var setTO = setTimeout(function () {
+						$obj.addClass(that.AddClass);
+						addanit(objlist, that.timer)
+					}, that.timer)
+				}
+				addanit();
+			}
+		</script>
+	</head>
+	<body>
+		<div class="join">
+		<div class="join-top">
+			<div class="join-1 fl a-bounceinT" style="-webkit-animation:bounceinT 2s ;">
+				<img src="images/join-1.png"/>
+			</div>
+			<div class="join-2 fr fl a-bounceinR" style="-webkit-animation:bounceinR 2.3s ;">
+				<img src="images/join-2.png"/>
+			</div>
+		</div>	
+		<div class="join-content">
+		<ul>
+			<li><a href="join-mold.html?type=0"><span class="test"></span>前端产品经理</a></li>
+			<li><a href="join-mold.html?type=1"><span class="clerk"></span>平台运营经理</a></li>
+			<li><a href="join-mold.html?type=2"><span class="operation"></span>渠道拓展</a></li>
+			<li><a href="join-mold.html?type=3"><span class="php"></span>PHP工程师</a></li>
+			<li><a href="join-mold.html?type=4"><span class="css"></span>Web前端开发</a></li>
+		</ul>			
+		</div>
+		</div>
+		
+	</body>
+</html>

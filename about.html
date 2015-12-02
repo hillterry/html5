@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,abouter-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/animation.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<title>about</title>
+		<script type="text/javascript">
+			$(function() {
+					$(".about").css("min-height", $(window).height());
+				$(window).resize(function() {
+					$(".about").css("min-height", $(window).height());
+				});
+				var obj1=[
+					{
+						ClassName :".about-1",
+						AddClass:"a-bounceinT",
+						timer:0
+					},
+					{
+						ClassName :".about-2",
+						AddClass:"a-bounceinR",
+						timer:300
+					}
+						,
+					{
+						ClassName :".about-content",
+						AddClass:"about-content-h",
+						timer:1000
+					} ,
+                    {
+                        ClassName :".comout",
+                        AddClass:"comoutan",
+                        timer:1000
+                    }
+				]
+				delytime(obj1)
+			})
+			function delytime(obj) {
+				var i=0;
+				var addanit =function(){
+					var objlist = obj;
+					if (i>=objlist.length){
+						clearTimeout(setTO);
+						return ;
+					}
+					var that = objlist[i];
+					var $obj =$(that.ClassName);
+					i++;
+					var setTO = setTimeout(function (){
+						$obj.addClass(that.AddClass);
+						addanit(objlist, that.timer)
+					}, that.timer)
+				}
+				addanit();
+			}
+
+		</script>
+	</head>
+	<body>
+		<div class="about">
+		<div class="about-top">
+			<a href="http://m.haituncun.com"><div class="about-1 fl " >
+				<img src="images/about-1.png"/>
+			</div></a>
+			<div class="about-2 fr">
+				<img src="images/about-2.png"/>
+			</div>
+		</div>	
+		<div class="about-content fontheiti">
+		<p>海豚村是国内最大的海外本土知名电商的入驻平台，国内消费者在海豚村可直接购买海外电商的产品，全程直购直邮，货源透明、价格透明和物流透明。</p>
+		<p>海豚村由黄云鹏和赵冬栋两位创始人创建于2013年，他们曾在华为公司工作多年，参与了华为向国际市场进军的全过程，2013年他们重新上路，将更多的海外大型零售企业通过互联网带入中国，在中国消费者和海外本土电商之间架起一座桥梁。</p>
+        <p>2014年8月海豚村获得联想控股君联资本A轮投资。经过一年多的发展，入驻海豚村的海外电商已经遍布欧洲，美国和澳洲，更多新的知名电商将陆续进驻海豚村。</p>
+		</div>
+		<div class="comout">
+            <div class="enterfront fontheiti">
+               <a onclick='tragethref()'>进入海豚村移动端    <span><i></i></span></a>               
+            </div>
+        </div>
+		</div>
+		
+	</body>
+</html>

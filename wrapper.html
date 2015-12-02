@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <title>team-office</title>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#includeall").attr("width", $(window).width());
+            $("#includeall").attr("height", $(window).height());
+            $(window).resize(function () {
+                $("#includeall").attr("width", $(window).width());
+                $("#includeall").attr("height", $(window).height());
+            })
+
+            $(".ui-music").bind("click", function (e) {
+                console.log("click success");
+                e.preventDefault();
+                var playControl = $(".ui-music audio");
+                var playC = document.getElementById("bgmusic");
+                var isPlaying = playControl.attr("data-play");
+                console.log(playControl);
+                
+
+                if (isPlaying == "1") {
+                    $(this).removeClass("playing");
+                    playControl.attr("data-play", "0");
+                    playC.pause();
+                } else {
+                    $(this).addClass("playing");
+                    playControl.attr("data-play", "1");
+                    playC.play();
+                }
+            });
+        });
+
+
+    </script>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        iframe {
+            border: none;
+            vertical-align: top;
+        }
+
+
+        .ui-icon {
+            background-image: url('images/icons.png');
+            position: absolute;
+            display: block;
+            z-index: 300;
+        }
+
+        .icon-music {
+            width: 48px;
+            height: 48px;
+            background-position: 48px 0;
+            display: block;
+        }
+
+        .ui-music {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            position: fixed;
+            left: 0;
+            top:4%;
+            margin-left: 30px;
+            display: block;
+            z-index: 100;
+        }
+
+            .ui-music.playing .icon-music {
+                -webkit-animation: reverseRotataZ 1.2s linear infinite;
+            }
+
+        @-webkit-keyframes reverseRotataZ {
+            0% {
+                -webkit-transform: rotateZ(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotateZ(-360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <iframe id="includeall" src="index.html"></iframe>
+   
+        <a href="javascript:;" class="ui-music playing">
+            <i class="ui-icon icon-music"></i>
+            <audio id="bgmusic" data-src="bgmusic.mp3" autoplay="autoplay" loop
+                   src="bgmusic.mp3" data-play="1"></audio>
+        </a>
+   
+</body>
+</html>

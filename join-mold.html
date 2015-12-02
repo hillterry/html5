@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,follower-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <title>join-mold</title>
+    <script type="text/javascript">
+
+        var desc = ['<div class="join-title">前端产品经理</div><div class="join-desc"><ul><li><div class="join-desc-title">岗位职责</div><div class="join-desc-content">深刻理解业务需求，负责电商网站前端产品规划及定制化设计，完整跟进上线流程；收集用户反馈并进行数据分析，持续优化产品。</div></li><li><div class="join-desc-title">任职要求</div><div class="join-desc-content">3年以上B2C行业相关的产品工作经验；沟通表达能力与逻辑思维能力强，有一定的英语能力；熟练使用Visio、Axure等软件独立完成产品功能流程及原型制作。</div></li><li><div class="join-desc-title">联系方式</div><div class="join-desc-content">刘小姐  <a href="mailto:may@haituncun.com"> may@haituncun.com</a></div></li></ul></div>',
+            '<div class="join-title">平台运营经理</div><div class="join-desc"><ul><li><div class="join-desc-title">岗位职责</div><div class="join-desc-content">负责商户渠道规划及运营，对商户的月度、季度、年度关键绩效指标（交易量和交易额）负责。</div></li><li><div class="join-desc-title">任职要求</div><div class="join-desc-content">2年以上互联网平台成功运营经验，丰富的电商活动策划及营销推广相关工作经验，对电商现状及发展有自己的见解；具有较强的主动性与执行力，良好的沟通能力。</div></li><li><div class="join-desc-title">联系方式</div><div class="join-desc-content">刘小姐  <a href="mailto:may@haituncun.com"> may@haituncun.com</a></div></li></ul></div>',
+            '<div class="join-title">渠道拓展</div><div class="join-desc"><ul><li><div class="join-desc-title">岗位职责</div><div class="join-desc-content">根据公司战略目标及行业发展趋势，制定总体市场渠道推广策略并监督实施；负责网站推广平台的拓展和业务洽谈，进行推广费用测算和投入产出分析。</div></li><li><div class="join-desc-title">任职要求</div><div class="join-desc-content">五年以上电商渠道管理工作经验；具备丰富的市场运营、策划推广、渠道建设、人员组织的实践经验 ；较强的企业经营决策能力、统筹策划经营能力、分析研究解决问题能力；男性优先。</div></li><li><div class="join-desc-title">联系方式</div><div class="join-desc-content">刘小姐  <a href="mailto:may@haituncun.com"> may@haituncun.com</a></div></li></ul></div>',
+            '<div class="join-title">PHP工程师</div><div class="join-desc"><ul><li><div class="join-desc-title">岗位职责</div><div class="join-desc-content">按照产品需求，负责Web产品后台开发维护、产品迭代更新；负责技术指标，配合运维人员完成代码优化、数据库优化等任务；负责移动端或PC端平台产品的开发。</div></li><li><div class="join-desc-title">任职要求</div><div class="join-desc-content">2年以上PHP开发经验，了解Zend framework等PHP框架；熟悉Mysql或其它大型数据库，有sql调优经验优先；熟悉Linux下Apache或nginx的PHP环境配置、熟悉电商系统。</div></li><li><div class="join-desc-title">联系方式</div><div class="join-desc-content">黄小姐 <a href="mailto:teresahuang@haituncun.com"> teresahuang@haituncun.com</a></div></li></ul></div>',
+            '<div class="join-title">Web前端开发</div><div class="join-desc"><ul><li><div class="join-desc-title">岗位职责</div><div class="join-desc-content">负责Web网站的前端开发、制作，优化等工作，保证页面交互效果及其他特效实现；持续优化前端界面与脚本，保证页面效果与主流浏览器的兼容性。</div></li><li><div class="join-desc-title">任职要求</div><div class="join-desc-content">2年以上相关工作经验，精通HTML/XHTML，CSS，熟练HTML+CSS布局；精通jQuery等JavaScript框架，对原生的JavaScript有一定了解；对后台开发语言（PHP、Java等）有一定了解。</div></li><li><div class="join-desc-title">联系方式</div><div class="join-desc-content">黄小姐 <a href="mailto:teresahuang@haituncun.com"> teresahuang@haituncun.com</a></div></li></ul></div>',
+        ];
+
+        $(function () {
+            $(".join-mold").css("min-height", $(window).height());
+            $(window).resize(function () {
+                $(".join-mold").css("min-height", $(window).height());
+            });
+
+            function GetRequest() {
+                var url = location.search; //  ȡurl  "?"     ִ
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    strs = str.split("&");
+                    for (var i = 0; i < strs.length; i++) {
+                        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                    }
+                }
+                return theRequest;
+            }
+            var Request = new Object();
+            Request = GetRequest();
+
+            var type = parseInt(Request["type"]);
+            //$(".join-mold ").css("background","url(images/j-"+ type +"-bj.jpg)");
+            $("#join-insert").html(desc[type]);
+        })
+    </script>
+</head>
+<body>
+    <div class="join-mold" style="background: url(images/job-bj.jpg) no-repeat">
+        <div class="job-desc" style="position: relative; width: 90%;margin: auto;top: 70px;">
+            <!-- <img class="job-img"/>-->
+            <div id="join-insert" style="background:#fff;height:850px;border-radius:10px;">
+            </div>
+            <div class="join-mold-x">
+                <a href="javascript:window.history.go(-1)">
+                    <img src="images/join-mold-x.png" alt="">
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
