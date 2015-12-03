@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,follower-scalable=no" />
     <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
-    <link href="css/animate.min.css?v=1.4" rel="stylesheet" />
+    <link href="css/animate.min.css?v=1.8" rel="stylesheet" />
     <title>partner-mold</title>
     <style>
-        body,ul {
+        body, ul {
             margin: 0;
             padding: 0;
-            overflow-x:hidden;
+            overflow-x: hidden;
         }
-        li{
-            list-style:none;
+
+        li {
+            list-style: none;
         }
+
         .partner-mold {
             width: 640px;
             height: 300px;
@@ -24,10 +26,11 @@
             font-size: 24px;
         }
 
-        .ita{
-            animation-iteration-count:3;
-            -webkit-animation-iteration-count:3;
+        .ita {
+            animation-iteration-count: 3;
+            -webkit-animation-iteration-count: 3;
         }
+
         .bg {
             position: absolute;
             left: 0;
@@ -60,7 +63,7 @@
             z-index: 99;
         }
 
-        .testtest{
+        .testtest {
             position: fixed;
             top: 50%;
             text-align: center;
@@ -75,7 +78,7 @@
             z-index: 99;
         }
 
-        .positiontest{
+        .positiontest {
             position: fixed;
             top: 30%;
             text-align: center;
@@ -90,10 +93,10 @@
             animation-duration: 1.5s;
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-            font-size:30px;
+            font-size: 30px;
         }
 
-        .fontaonedelay{
+        .fontaonedelay {
             -webkit-animation-delay: 2.2s;
             -moz-animation-delay: 2.2s;
             animation-delay: 2.2s;
@@ -101,18 +104,21 @@
             animation-duration: 1.5s;
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-            font-size:30px;
+            font-size: 30px;
         }
-        .test1{
-            text-align:left;
+
+        .test1 {
+            text-align: left;
+            margin-left: 50px;
         }
 
         .test2 {
             -webkit-animation-delay: 0.2s;
             -moz-animation-delay: 0.2s;
+            margin-left: 50px;
             animation-delay: 0.2s;
-            margin-left: 100px;
         }
+
         .test3 {
             -webkit-animation-delay: 0.5s;
             -moz-animation-delay: 0.5s;
@@ -154,63 +160,25 @@
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }
-
-        .thisistest{
-            -webkit-animation-delay: 2s;
-            -moz-animation-delay: 2s;
-            animation-delay: 2s;
-            -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-            -webkit-animation-name: chaos;
-            animation-name: chaos;
-        }
-
-        .thisistesttest{
-            -webkit-animation-delay: 2.2s;
-            -moz-animation-delay: 2.2s;
-            animation-delay: 2.2s;
-            -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-            -webkit-animation-name: chaos;
-            animation-name: chaos;
-        }
     </style>
 </head>
 <body>
 
     <div id="font1">
         <div class="test">
-            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
-            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
-            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+            <div class="test1 animated bounceInRightHush"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRightHush"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRightHush"><img src="images/testfont3.png" /></div>
         </div>
-
         <div class="testtest chaos2">
-            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
-            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
-            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+            <div class="test1 animated bounceInRightHush"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRightHush"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRightHush"><img src="images/testfont3.png" /></div>
         </div>
-
         <div class="testtest chaos3">
-            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
-            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
-            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
-        </div>
-
-        <div class="testtest chaos4">
-            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
-            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
-            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
-        </div>
-
-        <div class="testtest chaos5">
-            <div class="test1 animated bounceInRight"><img src="images/testfont1.png" /></div>
-            <div class="test2 animated bounceInRight"><img src="images/testfont2.png" /></div>
-            <div class="test3 animated bounceInRight"><img src="images/testfont3.png" /></div>
+            <div class="test1 animated bounceInRightHush"><img src="images/testfont1.png" /></div>
+            <div class="test2 animated bounceInRightHush"><img src="images/testfont2.png" /></div>
+            <div class="test3 animated bounceInRightHush"><img src="images/testfont3.png" /></div>
         </div>
     </div>
 
@@ -228,7 +196,34 @@
             <div><img src="images/testfont2.png" /></div>
             <div><img src="images/testfont3.png" /></div>
         </div>
+
+        <div class="positiontest1">
+            <div><img src="images/testfont1.png" /></div>
+            <div><img src="images/testfont2.png" /></div>
+            <div><img src="images/testfont3.png" /></div>
+        </div>
     </div>
+
+
+    <!--<div id="font3" style="display:none;">
+        <div class="position">
+            <div><img src="images/testfont1.png" /></div>
+            <div><img src="images/testfont2.png" /></div>
+            <div><img src="images/testfont3.png" /></div>
+        </div>
+
+        <div class="positiontest">
+            <div><img src="images/testfont1.png" /></div>
+            <div><img src="images/testfont2.png" /></div>
+            <div><img src="images/testfont3.png" /></div>
+        </div>
+
+        <div class="positiontest1">
+            <div><img src="images/testfont1.png" /></div>
+            <div><img src="images/testfont2.png" /></div>
+            <div><img src="images/testfont3.png" /></div>
+        </div>
+    </div>-->
 
     <div class="bg">
         <ul>
@@ -236,11 +231,14 @@
                         -webkit-animation-duration: 5s;animation-duration: 5s;-webkit-animation-fill-mode: both;animation-fill-mode: both;">
 
             </li>
-            <li id="name2" style="background: url(images/2.jpg) 50% 50% / cover no-repeat; display:none;-webkit-animation-duration: 4s;animation-duration: 4s;-webkit-animation-fill-mode: both;animation-fill-mode: both;">
+            <li id="name2" style="background: url(images/2.jpg) 50% 50% / cover no-repeat; display:none;-webkit-animation-duration: 5s;animation-duration: 5s;-webkit-animation-fill-mode: both;animation-fill-mode: both;">
+
+            </li>
+            <li id="name3" style="background: url(images/3.jpg) 50% 50% / cover no-repeat; display:none;-webkit-animation-duration: 5s;animation-duration: 5s;-webkit-animation-fill-mode: both;animation-fill-mode: both;">
 
             </li>
             <!--<li style="background: url(images/2.jpg) 50% 50% / cover no-repeat;"></li>
-        <li style="background: url(images/3.jpg) 50% 50% / cover no-repeat;"></li>-->
+            <li style="background: url(images/3.jpg) 50% 50% / cover no-repeat;"></li>-->
         </ul>
     </div>
 
@@ -251,23 +249,38 @@
                 $('#name2').css('display', 'list-item').addClass('testforscale1');
 
                 $('#font1').hide();
-                
+
                 $('.position > div').each(function (index) {
-                    $(this).addClass('thisis' +  (index+1))
+                    $(this).addClass('thisis' + (index + 1))
                 })
                 $('.positiontest > div').each(function (index) {
                     $(this).addClass('thisis' + (index + 1))
                 })
 
-                $('.position').addClass('thisistest');
-                $('.positiontest').addClass('thisistesttest');
-                
+                $('.positiontest1 > div').each(function (index) {
+                    $(this).addClass('thisis' + (index + 1))
+                })
+
+                $('.positiontest').addClass('chaos2');
+                $('.positiontest1').addClass('chaos3');
+
                 $('#font2').css('display', 'block');
             }, 4000)
 
-          
+            setTimeout(function () {
+
+                $('#name3').css('display', 'list-item').addClass('testforscale');
+
+            }, 8000)
         })
-        
+
+
+        //监控最后一个动画完成。如果完成则跳转到导航页面
+        var name3Div = document.getElementById('name3');
+        name3Div.addEventListener('webkitAnimationEnd', function () {
+            //window.location.href = 'http://m.haituncun.com';
+        }, false);
+
     </script>
 
 </body>

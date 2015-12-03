@@ -3001,11 +3001,16 @@ Copyright (c) 2014 Daniel Eden
     }
 
     80% {
-        opacity: 1;
+        opacity:1;
+    }
+
+    90% {
+        opacity: 0.6;
     }
 
     100% {
         -webkit-transform: scale(2);
+        opacity: 0;
     }
 }
 
@@ -3302,4 +3307,74 @@ Copyright (c) 2014 Daniel Eden
 .chaos {
     -webkit-animation-name: chaos;
     animation-name: chaos;
+}
+
+
+
+
+
+@-webkit-keyframes bounceInRightHush {
+    0%, 100%, 60%, 75%, 90% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(-80px, 0, 0);
+        transform: translate3d(-80px, 0, 0)
+    }
+    75% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0)
+    }
+    90% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0)
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes bounceInRightHush {
+    0%, 100%, 60%, 75%, 90% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(3000px, 0, 0);
+        -ms-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(-80px, 0, 0);
+        transform: translate3d(-80px, 0, 0)
+    }
+    75% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0)
+    }
+    90% {
+        -webkit-transform: translate3d(-20px, 0, 0);
+        -ms-transform: translate3d(-20px, 0, 0);
+        transform: translate3d(-20px, 0, 0)
+    }
+    100% {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+
+.bounceInRightHush{
+    -webkit-animation-name: bounceInRightHush;
+    animation-name: bounceInRightHush;
 }
